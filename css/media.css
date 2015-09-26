@@ -1,0 +1,142 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.logo{
+	left:0;
+}
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	h2 {
+	padding: 2.193em 0;
+
+}
+	#clients .clients{
+		margin-top: 40px;
+	}
+
+.row.about-contant{
+		margin-top: 0.714em;
+		margin-bottom: 2.143em;
+
+}
+#first-skill{
+	padding-top: 1.43em;
+}
+#fourth-skill{
+	padding-bottom: 2.193em
+}
+.numbers-icon-position{
+	margin-bottom: 2.857em;
+}
+
+#services .services-container{
+	margin-bottom: 0px;
+
+}
+#services .services-container .active{
+	margin-bottom: 0px;
+}
+.services-tabs-separate-section{
+	border:none;
+}
+#services .services-tabs-separate-section h5{
+	margin-bottom: 0.4em;
+}
+#services .services-tabs-separate-section .additational-content h6{
+	margin-bottom: 0.4em;
+}
+
+#services .services-container::after{
+	display: none;
+}
+#services .tabs{
+	margin-bottom: 1em
+}
+#services .tabs-rows{
+	margin-bottom: 1em
+}
+#plans .plans-options{
+	display: none;
+}
+#plans .plans-see-more{
+	display: block;
+}
+	#get_in_touch input.button.subscribe{
+		margin-top: 20px;
+		position: relative;
+		left: 70%;
+	}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+#services .services-container h5{
+	display:none;
+	
+}
+    #portfolio .portfolio-menu ul{
+        padding: 0;
+    }
+    #testimonials .testimonials-sliger-navigate-buttons{
+        margin-bottom: 2em;
+    }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 400px) {
+
+	h3{	
+	visibility: hidden;
+	display: block !important;
+}
+h1{
+	padding-bottom: 2%;
+	
+}
+
+}
+
+}
+
+
+
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

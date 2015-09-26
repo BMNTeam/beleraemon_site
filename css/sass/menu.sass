@@ -1,0 +1,1060 @@
+/*BEGIN color variabels */
+$color: white
+$oposite-color: black
+$contrast-color: rgba(0, 0, 0, 0.8)
+$main-color: orange
+$hover-color: white
+$light-color: #777777
+//PLANS section
+$plans-capltion-colours: #e9e7e7
+$plans-caption-color: #767676
+$plans-options-text-color: #161616
+$plans-background-color: #e9e7e7
+$plans-most-popular-color: #8f6219
+/* END color variabels */
+
+/* BEGIN fonts variabels */
+$lh: 70px
+$ff: 'Roboto Condensed', sans-serif
+$ff-h1: 'Roboto Slab', serif
+$ff-logo: 'Orbitron', sans-serif
+$fz-icons: 1.23em
+/* END fonts variabels */
+
+body
+  font-family: $ff
+  font-size: 14px
+  color:black
+.dark
+  background-color: black
+  color:$color
+  h2
+    &:before,&:after
+      background-color: $color
+
+/* Begin rules for all document */
+h1
+  font-family: $ff-h1
+  font-size: 2.64em
+  color:$color
+  color: orange
+  padding-top: 30px
+  padding-bottom:100px
+  span
+    font-weight: 100
+    color:$color
+
+h2
+  font-family: 'Roboto', sans-serif
+  display: block !important
+  font-size: 24px
+  margin: 0
+  padding: 4.286em 0
+  color:$main-color
+  text-transform: uppercase
+  text-align: center
+  span
+    font-weight: 100
+  &:before, &:after
+    content:""
+    width: 20px
+    height: 1px
+    margin: 0 20px
+    vertical-align: middle
+    display: inline-block
+    background-color: $oposite-color
+
+h3
+  font-family: 'Roboto', sans-serif
+  font-size: 24px
+  margin: 0
+  padding: 0
+  color: $color
+  text-transform: uppercase
+  text-align: center
+
+h4
+  font-size: 18px
+  margin: 0
+  padding: 0
+  text-transform: uppercase
+  text-align: center
+
+h5
+  font-size: 16px
+  margin: 0
+  padding: 0
+  text-transform: uppercase
+  text-align: center
+h6
+  font-size: 14px
+  text-transform: uppercase
+
+p
+  margin: 0
+  padding: 0
+  font-size: 14px
+  font-family: $ff
+  color:$color
+  &.buttons
+    padding-top: 25px
+
+a
+  color:$color
+  transition: color 0.5s
+  &:hover, &:active
+    color: $main-color
+    text-decoration: none
+
+.no-margin
+  margin:0
+
+.no-padding
+  padding:0
+
+/* End rules for all document */
+
+/* Begin menu section */
+.nav .menu ul > li, .nav .left-menu ul > li
+  display: inline-block
+  padding-left:20px
+  line-height:$lh
+  color:$color
+  &:first-child
+    padding-left: 0
+
+.logo
+  font-family: $ff-logo
+  line-height:$lh
+  position:fixed
+  left:43%
+  color:$color
+
+  &:before, &:after
+    content:"";
+    width:20px
+    height:1px
+    margin: 20px
+    background-color: $color
+    display: inline-block
+
+    vertical-align: middle
+
+.left-menu
+  float: left
+
+.right-menu
+  float: right
+
+ul > li.icons
+  float:right
+  padding-left: 10px
+  font-size: $fz-icons
+  &:last-child
+    padding-left:70px
+
+.nav .container
+  border-bottom:1px solid $color
+
+.nav
+  z-index: 9999
+  width: 100%
+  position:fixed
+  &.nav-menu-dark
+    background-color: $oposite-color
+    &.nav-menu-separate-none
+
+.menu-icon
+  float:right
+  line-height:$lh
+  font-size: 20px
+
+.small-menu
+  display:none
+  ul
+  width:100%
+  background-color: $contrast-color
+  text-transform: uppercase
+  padding-left:0
+  position:absolute
+  text-align: left
+  right:0
+  top:70px
+  overflow:hidden
+  li
+    display: block
+    padding:5px
+
+a.mPS2id-highlight
+  color: $main-color
+
+/* End menu section */
+
+/* BEGIN menu-icon section */
+.menu-button-switch
+  display: block
+  position: relative
+  margin: 0
+  padding: 0
+  background-color: transparent
+  width: 60px
+  height: 70px
+  font-size: 0
+  text-indent: -9999px
+  appearance: none
+  box-shadow: none
+  border-radius: none
+  border: none
+  cursor: pointer
+  transition: background 0.3s
+  span
+    display: block
+    position: absolute
+    top: 32px
+    left: 18px
+    right: 18px
+    height: 2px
+    background-color: $color
+    &:before, &:after
+      position: absolute
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: $color
+      content:''
+    &:before
+      top: -10px
+    &:after
+      bottom: -10px
+
+.menu-button-rotate
+  outline:none
+  span
+    &::before,
+    &::after
+      transition-duration: 0.3s, 0.3s
+      -o-transition-duration: 0.3, 0.3
+      -webkit-transition-duration: 0.3s, 0.3s
+      -moz-transitionsa-duration: 0.3s, 0.3s
+      transition-duration: 0.3s, 0.3s
+      -webkit-transitiondelay: .3s, 0s
+      -o-transition-delay: 0.3s, 0s
+      -moz-transition-delay: .3s, 0s
+      transition-delay: 0.3s, 0s
+    &::before
+      -webkit-transition-property: top, -webkit-transform
+      transition-property: top, transform
+
+    &::after
+      -moz-transition-property: bottom, transform
+      -o-transition-property: bottom, transform
+      -webkit-transition-property: bottom, -webkit-transform
+      transition-property: bottom, transform
+  &.active
+    span
+      background-color: transparent
+      &::before
+        top:0;
+        -moz-transform: rotate(45deg)
+        -o-transform: rotate(45deg)
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+      &::after
+        bottom:0;
+        -moz-transform: rotate(-45deg)
+        -o-transform: rotate(-45deg)
+        -webkit-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+      &::before,
+      &::after
+        background-color: $main-color
+        -moz-transition-delay: 0s, 0.3s
+        -o-transition-delay: 0s, 0.3s
+        -webkit-transition-delay: 0, 0.3s
+        transition-delay: 0s, 0.3s
+
+/* END menu-icon section */
+
+/* Begin #home section */
+#home
+  background-image: url("../img/main-bg.jpg")
+  background-color: black
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+
+.main-text
+  padding: 50px 0
+  text-align: center
+  position:relative
+
+.button
+  text-transform: uppercase
+  padding: 10px 25px
+  border:1px solid $color
+  margin-right: 15px
+  animation:colors 3 s 3
+  a
+  &:hover
+    text-decoration: none
+    color:$color
+  &.select
+    border-color:$main-color
+    color:$main-color
+
+/* End #home section */
+
+/* Begin Mouse down section */
+.mouse-down
+  text-align: center
+  position:relative
+  top:0
+  left:0
+
+.mouse
+
+  position:relative
+  top:0
+  bottom:-80px
+  display: inline-block
+  width:30px
+  height:40px
+  border:1px solid $color
+  border-radius:20px
+
+.weel
+  left:0
+  top:0
+  display: inline-block
+  width:5px
+  height:5px
+  background-color: $main-color
+  border:1px solid $main-color
+  border-radius:50%
+  animation:slideInDown 1 s infinite
+
+/* End Mouse down section*/
+/* BEGIN video background section */
+video#logo
+  min-width:100%
+  min-height: 100%
+  width: auto
+  height: auto
+  background-color: black
+  background-size: cover
+  z-index:0
+  position: fixed
+  left: 0
+  bottom: 0
+/* END video background section */
+
+/* BEGIN section About part */
+
+
+.light
+  p
+    font-size: 1em
+    color:$oposite-color
+    line-height: 1.7142857142857142857142857142857em
+    margin-bottom: 2.2971428571428571428571428571429em
+
+  .quote
+    p
+      font-size: 1.2857142857142857142857142857143em
+      color:$oposite-color
+      letter-spacing: 0.025em
+      line-height: 2.222em
+      margin-bottom: 0
+  .line
+    display: block
+    width: 37.5%
+    height: 2px
+    background-color: $main-color
+    margin-top: 20px
+    margin-bottom: 20px
+  .img
+    width:100%
+    height:237px
+    background-color: $oposite-color
+  .about-name-skill
+    padding-top: 0
+    height: 1em
+    margin-bottom:0.72em
+    display: block
+    .about-name
+      float: left
+    .about-skill
+      float: right
+  .about-slide-container
+    height: 1.423em
+    width: 100%
+    background-color: grey
+    .about-scroll
+      width: 70%
+      height:100%
+      background-color: $oposite-color
+      &.active
+        width:0
+      &.after-active
+        transition:above-level
+
+#first-skill
+  .about-slide-container
+    .after-active
+      width: 70%
+
+#second-skill
+  padding-top: 1.43em
+  .about-slide-container
+    .after-active
+      width: 90%
+
+#third-skill
+  padding-top: 1.43em
+  .about-slide-container
+    .after-active
+      width: 98%
+
+#fourth-skill
+  padding-top: 1.43em
+
+  .about-slide-container
+    .after-active
+      width: 85%
+
+.row
+  &.about-contant
+    margin-top: 4.286em
+    margin-bottom: 5.714em
+
+
+
+/* END section About part */
+
+/* BEGIN NUMBERS section */
+#numbers
+  &.dark
+    background-color: black
+    h4
+      color:$color
+      line-height: 1.667em
+      position: relative
+      &:after
+        content:''
+        display: block
+        margin: 0 auto
+        margin-bottom: 1.111em
+        width: 20px
+        height: 1px
+        background-color: $main-color
+    i
+      color:$color
+    h2
+      &:before, &:after
+        background-color: white
+
+.numbers-icon-position
+
+  width: 100%
+  text-align: center
+  i
+    margin-top: 0
+    margin-bottom: 0.417em
+
+    font-size: 2.571em
+    display: inherit
+  p
+    margin: 0
+    padding: 0
+    font-size: 1.429em
+  margin-bottom: 80px
+  &:hover
+    cursor: pointer
+    i
+      color:$main-color!important
+
+/* END NUMBERS section */
+/* BEGIN our team section  */
+.team-container
+  h4
+    letter-spacing: 0.05em
+    &:after
+      content:''
+      display: block
+      margin: 0.833em auto 0 auto
+      width: 20px
+      height: 1px
+      background-color: $oposite-color
+  p
+    text-align: center
+    color:$light-color
+    margin-bottom: 0.714em
+
+.team-text-onshow
+  position: absolute
+  left: 0
+  top: 0
+  overflow: auto
+  -webkit-transition: background-color 2s, opacity 1s ease-out
+  -moz-transition: background-color 2s, opacity 1s ease-out
+  -ms-transition: background-color 2s, opacity 1s ease-out
+  -o-transition: background-color 2s, opacity 1s ease-out
+  transition: background-color 2s, opacity 1s ease-out
+  visibility: hidden
+  width: 100%
+  height:100%
+  opacity:0
+  .team-text-onshow-content
+    padding: 2.143em
+    color: $color
+    p.team-text-onshow-person-name
+      text-transform: uppercase
+      text-align: left
+      padding-top:0.714em
+      padding-bottom:1.429em
+      margin: 0
+      color:$color
+
+    h5
+      color:$main-color
+    .separate-line
+      width: 100%
+      height: 1px
+      background-color: $color
+    p
+      margin-top: 2.143em
+        margin-bottom: 0.714em
+        text-align: left
+        color:#cdcdcd
+        letter-spacing: 0.01em
+    .team-text-onshow-shot-sepparate
+      display: block
+      width: 20px
+      height: 1px
+      background-color: $color
+      text-align: center
+      margin: 0 auto
+    .team-text-onshow-icons-container
+      font-size: 1.286em
+      text-align: center
+      padding-top: 1em
+      i
+        padding-left: 0.556em
+
+.team-employe-photo
+  position: relative
+  margin-bottom: 30px
+  display: block
+  width: 100%
+  height: 360px
+  background-color: none
+  text-align: center
+  img
+    width: 263px
+    height: 360px
+
+  &:hover .team-text-onshow
+      background-color: black
+      visibility:visible
+      opacity: 1
+
+.button:hover
+  color:$color
+  background-color: $main-color
+  border: 1px solid $main-color
+
+input.button
+  display:block
+  margin: 30px auto 50px auto
+  border: 1px solid $main-color
+  padding: 10px 30px
+  font-size: 1em
+  background:none
+  color:$main-color
+  text-transform: uppercase
+  text-align: center
+  outline:none
+/* END our team section */
+
+/* BEGIN video section  */
+#video
+  .video-full
+    position: relative
+    height: 300px
+    text-align: center
+    color:$color
+    overflow:hidden
+    //background-color: #000
+    .child
+      display: inline-block
+      vertical-align: middle
+      p
+        font-size: 48px
+        line-height: 40px
+        padding: 20px
+        border:1px solid $color
+        border-radius:50%;
+        &:hover
+          color:$main-color
+          border-color:$main-color
+
+    .helper
+      display: inline-block
+      vertical-align: middle
+      height: 100%;
+      width: 0
+
+video#middle-video
+  position: absolute
+  display: block
+  left: 0
+  top: 0
+  z-index:-1
+  min-width:100%
+  min-height:100%
+/* END video section */
+/* BEGIN section services  */
+#services
+  border-bottom: 1px solid $oposite-color
+  .tabs-rows
+    margin-bottom: 5.714em
+  input
+    float: right
+    margin-top: 0.571em
+    margin-bottom: 0
+  .services-tabs-image
+    margin-top: 1em
+    height: 200px
+  .services-container
+    position: relative
+    text-align: center
+    cursor:pointer
+    color:$light-color
+    margin-bottom: 8.571em
+    &.active
+      color:$oposite-color
+    i
+      font-size: 2.143em
+    &:after
+      content:""
+      display: inline
+      height: 3.571em
+      width: 1px
+      background-color: $light-color
+      position: absolute
+      right: 0
+      top:20%
+      vertical-align: middle
+      :last-of-type
+        display: none
+
+    h5
+      letter-spacing: 0.1em
+  .line-separator
+    width: 1.429em
+    height: 1px
+    background-color:$light-color
+    display: block
+    margin: 0 auto
+    margin-top: 0.357em
+    margin-bottom: 1.429em
+  .active + .line-separator
+    background-color: $oposite-color
+  .tabs
+    margin-bottom: 14.286em
+    letter-spacing: 0.01em
+    img
+      margin-top: 10%
+      height: 180px
+      width: 100%
+      background-color: black
+    h5
+      margin: 1.25em 0 1.875em 0
+      font-weight: bold
+
+    .services-tabs-main-section
+      ul
+        li
+          list-style-type: disc
+
+    .additational-content
+      h6
+        font-size: 1em
+        text-transform: uppercase
+        font-weight: bold
+        margin: 1.429em 0 2.143em 0
+
+.services-tabs-separate-section
+  border-top: 1px solid $oposite-color
+/* END section services */
+/* BEGIN section portfolio  */
+#portfolio
+  .col-md-4, .col-md-8
+    padding: 0
+  .portfolio-menu
+    text-align: center
+    ul
+      margin-bottom: 1.786em
+      li
+        display: inline-block
+        padding-left: 1.071em
+        text-transform: uppercase
+        color: $light-color
+        cursor: pointer
+        margin-bottom: 0.357em
+        &.active
+          color:$oposite-color
+
+  .item
+    overflow: hidden
+    height: 17.875em
+    margin-bottom: 0.714em
+    z-index: 2
+    img
+      z-index: -5
+      transition: transform 2s
+      &:hover
+        transform: scale(1.2)
+    .portfolio-hover-block
+      position: absolute
+      transition: height .4s
+      left: 0
+      bottom: 0
+      width: 100%
+      background-color: rgba(0, 0, 0, 0.6)
+      height: 100%
+      text-align: center
+      opacity: 0
+      transition: opacity 1s
+      &:hover
+        opacity: 1
+        height:100%
+      &:hover~img
+        transform: scale(1.2)
+      i
+        color:$color
+        font-size: 1.286em
+        padding-top: 0.556em
+      p#name
+        text-transform: uppercase
+        color:white
+        padding-top: 3.571em
+      .separate-line
+        margin: 0 auto
+        margin-top: 1.429em
+        width: 1.429em
+        height: 1px
+        background-color: $color
+      .portfolio-buttons-section
+        width: 14.286em
+        margin: 0 auto
+        i
+          color:$color
+          margin-left: 1.667em
+          margin-top: 1.458em
+          font-size: 1.714em
+          padding: 0.625em
+          border:1px solid $color
+          border-radius: 50%
+          -webkit-transition:color .4s, border-color .4s
+          -moz-transition:color .4s, border-color .4s
+          -ms-transition:color .4s, border-color .4s
+          -o-transition:color .4s,border-color .4s
+          transition:color .4s,border-color .4s
+
+          &:hover
+            color: $main-color
+            border-color: $main-color
+        i#first
+          margin-left: 0
+#shuffleSection
+  margin-bottom: 5.714em
+/* END section portfolio
+/*BEGIN SECTION TESTIMONIAL*/
+
+#testimonials
+  p
+    text-align: center
+    margin-top: 2.143em
+    display: block
+    position: relative
+  .line-separator
+    width: 1.429em
+    height: 1px
+    background-color: $color
+    margin: 0.714em auto 2.143em auto
+
+  .testimonials-sliger-navigate-buttons
+    text-align: center
+    padding-top: 0.714em
+    i
+      margin-left: 1.429em
+      &:hover
+        cursor:pointer
+      &:first-child
+        margin: 0
+    margin-bottom: 5.714em
+/*END SECTION TESTIMONIAL*/
+/*BEGIN SECTION CLIENTS*/
+#clients
+  border-bottom: 1px solid $oposite-color
+  h2
+    text-align: left
+    float: left
+    position: relative
+  .client
+    height: 22px
+    width: 140px
+    display: inline-block
+  .clients
+    padding: 20px 10px
+    border: 1px solid $oposite-color
+    display: inline-block
+    margin-top: 80px
+    margin-left: 20px
+    cursor: pointer
+    float: left
+  .clients-client-container
+    -webkit-user-select: none
+    cursor: e-resize
+    overflow: hidden
+  .clients-container-wrap
+      width: 9999px
+
+.black-and-white,
+.black-and-white img
+    -webkit-filter: url('../img/filters.svg#blur')
+    -moz-filter: url('../img/filters.svg#blur')
+    filter: url('../img/filters.svg#blur')
+
+/*BEGIN SECTION CLIENTS*/
+/*BEGIN SECTION PLANS*/
+#plans
+
+  .main-container
+      position: relative
+      P
+        color: $plans-options-text-color
+      :nth-child(3)
+        border-top: 1px dashed $oposite-color
+        
+      background-color: $plans-background-color
+      &:hover .plans-caption p
+        color: $color
+      .plans-caption
+        display: block
+        height: 7.143em
+        width: 100%
+        p
+          transition: .4s
+          line-height: 4.545em
+          background-color: $oposite-color
+          font-size: 22px
+          text-transform: uppercase
+          text-align: center
+          vertical-align: middle
+          color: $plans-caption-color
+      .plans-price-part
+        text-align: center
+        height: 14.286em
+        width: 100%
+        display: table
+        p
+          display: table-cell
+          vertical-align: middle
+          &:before,
+          &:after
+            content:""
+            width: 1.429em
+            height: 1px
+            margin: 0 1.429em 1.429em 1.429em
+            vertical-align: middle
+            display: inline-block
+            background-color: $oposite-color
+          color: $oposite-color
+          span
+            font-size: 3.143em
+
+      .plans-options
+        border-bottom: 1px dashed $oposite-color
+        p
+          padding: 1.429em 2.143em
+        .plans-options-caption
+          float: left
+        .plans-options-capabilities
+          p
+            font-size: 1.143em
+          float: right
+  .plans-see-more
+    text-transform: uppercase
+    text-align: center
+    cursor: pointer
+    display: none
+    p
+      padding: 0.714em
+      padding-bottom: 0
+      color: black
+  .plans-sign-up-button
+    border-color: $oposite-color
+    color: $oposite-color
+    transition: .4s
+    &:hover
+      border-color: $color
+      color: $color
+    font-size: 1.143em
+    display: block
+    width: 8.125em
+    margin: 2.5em auto
+  .plans-most-popular
+    text-transform: uppercase
+    background-color: $plans-most-popular-color
+    color: $color
+    text-align: center
+    font-size: 1em
+    position: absolute
+    top: 0px
+    left: 0px
+    height: 1.25em
+    width: 100%
+  .plans-caption p.plans-most-popular-plan
+    color: $color
+  .plans-sign-up-button.button.active
+    border-color: $main-color
+    color: $color
+    background-color: $main-color
+    
+/*END SECTION PLANS*/
+//BEGIN SECTION GET-IN-TOUCH
+#get_in_touch
+
+  color: $color
+  h2
+    &:before,&:after
+      background-color: $main-color
+  h6
+    text-align: center
+    padding: 1.25em
+    position: static
+  .get-in-touch-subscribe-section
+    position: relative
+    display: inline-block
+    width: 100%
+    span
+      position: absolute
+      left: 7px
+      top: 7px
+  .centered
+    margin-bottom: 80px
+  input.get-in-touch-email-input
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid $color
+    outline: none
+    padding: 7px
+    padding-left: 24px
+    width: 100%
+    position: relative
+  input.button.subscribe
+    margin: 0
+    padding: 7px 40px
+//END SECTION GET-IN-TOUCH
+//BEGIN SECTION CONTACTS
+#contacts
+  background-color: black
+  .contacts-container
+    background-color: $oposite-color
+  .contacts-container.right
+    background-color: #fff
+  h2.no-decoration
+    &:before,&:after
+      width: 0
+      height: 0
+    padding: 50px 0px
+    color: $color
+  h2
+    padding: 50px 0
+  .contacts-line-separator
+    width: 100px
+    height: 1px
+    background-color: $main-color
+    margin: 0 auto
+  p
+    margin: 30px
+    text-align: center
+  .contacts-input-container
+    position: relative
+    text-align: center
+    span
+      position: absolute
+      color: $color
+      top: 0
+      padding-left: 7px
+  input.contacts-input,
+  textarea.contacts-input
+    color: $color
+    background-color: transparent
+    padding-left: 24px
+    border: none
+    outline: none
+    border-bottom: 1px solid $color
+    width: 80%
+    margin-bottom: 30px
+  input.button
+    margin: 0 0 70px 0
+    display: block
+  .contacts-information-container
+    h6
+      margin-bottom: 2px
+  .contacts-information-container-content
+    margin: 10px 0
+    i
+      margin-right: 5px
+    span
+      color: $light-color
+    a
+      font-size: 1.5em
+      color: $oposite-color
+      transition: color 0.5s
+      &:hover, &:active
+        color: $main-color
+        text-decoration: none
+  .contacts-information-container
+    margin-bottom: 30px
+  .contacts-information-container-line-sepatator
+    width: 20px
+    height: 1px
+    background-color: $main-color
+//END SECTION CONTACTS
+//BEGIN SECTION MAP
+#map
+  background-color: $main-color
+  h5
+    margin: 40px auto
+    color: $color
+    i
+      margin: 0 10px
+      font-size: 1.3em
+  :hover
+    cursor: pointer
+#fullMap
+  display: none
+//END SECTION MAP
+//BEGIN SECTION FOOTER
+#footer
+  p
+    margin: 30px 0
+    text-align: center
+
+  a
+    font-size: 1.5em
+    color: $oposite-color
+    transition: color 0.5s
+    padding: 0 5px
+    &:hover, &:active
+      color: $main-color
+      text-decoration: none
+  .footer-text-left p
+    text-align: left
+  .footer-text-right p
+    text-align: right
+//END SECTION FOOTER
